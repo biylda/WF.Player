@@ -69,6 +69,18 @@ namespace WF.Player.SettingsPage
 					UseMarkdown = true,
 				};
 
+			var compiled = new ExtendedLabel
+				{
+					Text = Catalog.Format("compiled by biylda"),
+					TextColor = App.Colors.Text,
+					FontSize = Settings.FontSize * 0.8,
+					LineBreakMode = LineBreakMode.WordWrap,
+					XAlign = TextAlignment.Center,
+					HorizontalOptions = LayoutOptions.FillAndExpand,
+					VerticalOptions = LayoutOptions.Fill,
+					UseMarkdown = true,
+				};
+
 			var copyright = new ExtendedLabel 
 				{
 					Text = Catalog.GetString("__Copyright by__  \nWherigo Foundation  \nDirk Weltz  \nBrice Clocher\n"),
@@ -142,6 +154,7 @@ namespace WF.Player.SettingsPage
 			layout.Children.Add(headline);
 			layout.Children.Add(emptyline);
 			layout.Children.Add(version);
+			layout.Children.Add(compiled);
 			layout.Children.Add(copyright);
 			layout.Children.Add(emptyline);
 			layout.Children.Add(credits);
